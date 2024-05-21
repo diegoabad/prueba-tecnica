@@ -9,5 +9,6 @@ export default defineConfig(({ mode }) => {
       __APP_ENV__: env.APP_ENV,
     },
     plugins: [react()],
+    base: "https://diegoabad.github.io/prueba-tecnica",
   };
 });

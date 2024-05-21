@@ -4,8 +4,6 @@ import { Location } from "../types";
 import { Coordinates } from "../types";
 import { WeatherApiResponse } from "../types/WeatherApiResponse";
 import { City } from "../types";
-const { VITE_OPENWEATHERMAP_URL, VITE_OPENWEATHERMAP_API_KEY } = import.meta
-  .env;
 
 export const getWeatherData = async ({
   latitude,
@@ -13,7 +11,7 @@ export const getWeatherData = async ({
 }: Coordinates): Promise<WeatherApiResponse> => {
   try {
     const response: AxiosResponse<WeatherApiResponse> = await axios.get(
-      `${VITE_OPENWEATHERMAP_URL}/data/3.0/onecall?lat=${latitude}&lon=${longitude}&appid=${VITE_OPENWEATHERMAP_API_KEY}`
+      `https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&appid=e7b6dbf4460a6c8b3a0b1a15aac96505`
     );
     return response.data;
   } catch (error) {
@@ -25,14 +23,7 @@ export const getWeatherData = async ({
 export const getDirectGeocoding = async (cityName: string): Promise<City[]> => {
   try {
     const response: AxiosResponse<GeocodingApiResponse> = await axios.get(
-      `${VITE_OPENWEATHERMAP_URL}/geo/1.0/direct`,
-      {
-        params: {
-          q: cityName,
-          limit: 1,
-          appid: VITE_OPENWEATHERMAP_API_KEY,
-        },
-      }
+      `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=e7b6dbf4460a6c8b3a0b1a15aac96505`
     );
     const locations: City[] = response.data.map((location: Location) => ({
       lat: location.lat,
