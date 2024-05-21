@@ -1,0 +1,72 @@
+.card {
+  background-color: rgba(62, 62, 62, 0.39);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 20px;
+  width: 600px;
+  font-family: Arial, sans-serif;
+}
+
+.currentWeather {
+  text-align: center;
+}
+
+.weatherInfo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.weatherInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weatherInfo img {
+  width: 100px;
+  height: 100px;
+}
+
+.nextDays {
+  margin-top: 20px;
+}
+
+.day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.nextDays {
+  text-transform: capitalize;
+}
+
+.day img {
+  width: 50px;
+  height: 50px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    padding: 0;
+  }
+}
