@@ -81,7 +81,7 @@ export const PrincipalCardWeather: React.FC<PrincipalCardWeatherProps> = ({
               .map((day: DailyWeather, index: number) => (
                 <div key={index} className={style.day}>
                   <p className={style.nextDays}>{formatDate(day.dt)}</p>
-                  <div>
+                  <div className={style.nextDays__day}>
                     <img
                       src={`http://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
                       alt="Weather Icon"

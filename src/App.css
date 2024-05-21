@@ -7,4 +7,5 @@
   width: 100vw;
   background-color: rgba(16, 15, 16);
   color: #ebebeb;
+  overflow: auto;
 }
