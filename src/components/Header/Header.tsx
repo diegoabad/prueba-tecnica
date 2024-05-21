@@ -26,7 +26,7 @@ export const Header: React.FC<HeaderProps> = ({ setCityWeather }) => {
         <input
           type="text"
           onChange={handleChange}
-          placeholder="Ingrese una ciudad..."
+          placeholder="Enter a city..."
           value={city}
         />
         <button

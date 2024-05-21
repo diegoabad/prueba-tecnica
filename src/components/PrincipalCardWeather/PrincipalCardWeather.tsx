@@ -22,7 +22,7 @@ export const PrincipalCardWeather: React.FC<PrincipalCardWeatherProps> = ({
   return (
     <div className={style.card}>
       {!weatherData ? (
-        <p>Elija una ciudad...</p>
+        <p>Choose a city, please...</p>
       ) : (
         <div>
           <div className={style.currentWeather}>

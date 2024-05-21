@@ -1,6 +1,6 @@
 # Weather App
 
-![Weather App](weather-app.png)
+![Weather App](src/assets/img.png)
 
 ## Descripción
 
